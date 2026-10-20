@@ -1,7 +1,7 @@
 package org.example.shelter;
 
 import org.example.model.Animal;
-import org.example.model.AdoptionStatus.java
+import org.example.model.AdoptionStatus;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,20 +42,19 @@ public class Shelter <T extends Animal>{
     }
 
     public void markAsAdopted(String id){
-        public void markAsAdopted(String id) {
-            for (T animal : animals) {
-                if (animal.getId().toString().equals(id)) {
-                    if (animal.getAdoptionStatus() == AdoptionStatus.ADOPTED) {
-                        System.out.println("This animal has already been adopted.");
-                    } else {
-                        animal.markAsAdopted();
-                        System.out.println("Animal successfully marked as adopted.");
-                    }
-                    return;
+        for (T animal : animals) {
+            if (animal.getId().toString().equals(id)) {
+                if (animal.getAdoptionStatus() == AdoptionStatus.ADOPTED) {
+                    System.out.println("This animal has already been adopted.");
+                } else {
+                    animal.markAsAdopted();
+                    System.out.println("Animal successfully marked as adopted.");
                 }
+                return;
             }
-
-            System.out.println("Animal with this ID was not found.");
         }
+
+        System.out.println("Animal with this ID was not found.");
     }
 }
+

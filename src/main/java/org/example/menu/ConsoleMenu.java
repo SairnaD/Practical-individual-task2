@@ -1,11 +1,11 @@
 package org.example.menu;
 
 import org.example.model.Animal;
+import org.example.model.AnimalId;
 import org.example.shelter.Shelter;
 import org.example.model.Dog;
 import org.example.model.Cat;
 import org.example.model.Bird;
-import org.example.shelter.Shelter;
 
 import java.util.List;
 import java.util.Scanner;
