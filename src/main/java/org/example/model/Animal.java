@@ -16,22 +16,6 @@ public sealed abstract class Animal permits Dog,Cat,Bird {
         this.adoptionStatus = AdoptionStatus.AVAILABLE;
     }
 
-    public AnimalId getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public AdoptionStatus getAdoptionStatus() {
-        return adoptionStatus;
-    }
-
     public void markAsAdopted(){
         this.adoptionStatus = AdoptionStatus.ADOPTED;
     }
